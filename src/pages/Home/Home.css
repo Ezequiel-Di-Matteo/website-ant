@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+body {
+  background-color: #0e0e0e;
+}
+
+.home-main {
+  max-width: 1750px;
+  margin: auto;
+  margin-top: 210px;
+  overflow-x: hidden;
+}
+
+.home-main > .home-section > .home-article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-img {
+  width: 600px;
+  height: 600px;
+  margin-right: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-img > img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.home-textos {
+  margin-left: 40px;
+  width: 600px;
+}
+
+.home-textos > h2 {
+  font-size: 5rem;
+  margin-bottom: 40px;
+  line-height: 1;
+}
+
+.home-textos > p {
+  font-size: 1.5rem;
+  width: 410px;
+  margin-bottom: 40px;
+}
+
+.home-textos > .home-button {
+  font-size: 1.4rem;
+  padding: 9px 70px;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 1.2rem 5rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: #fb4137;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 20px transparent;
+  margin-bottom: 40px;
+}
+.home-button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 16px #fb4137;
+}
+@media screen and (max-width: 1250px) {
+  .home-article {
+    flex-direction: column;
+  }
+
+  .home-textos {
+    order: 2;
+  }
+
+  .home-img {
+    width: 300px;
+    height: 300px;
+    margin-right: 0px;
+  }
+
+  .home-main > .home-section > .home-article {
+    justify-content: center;
+    align-items: center;
+  }
+  .home-textos {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .home-textos > h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .home-main {
+    margin-top: 180px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home-img > {
+    width: 40%;
+    height: 40%;
+  }
+
+  .home-textos {
+    width: 450px;
+    font-size: 1rem;
+  }
+
+  .home-textos > h2 {
+    font-size: 3.5rem;
+    line-height: 1.3;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home-textos > h2 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    max-width: 300px;
+  }
+  .home-textos > p {
+    width: 70%;
+  }
+}

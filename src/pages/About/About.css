@@ -1,0 +1,381 @@
+* {
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+body {
+  background-color: #0e0e0e;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0e0e0e;
+}
+
+.head-title > a {
+  opacity: 0;
+}
+
+.head-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1750px;
+  margin: auto;
+  height: 160px;
+}
+
+#menuIcon {
+  z-index: 20;
+  display: none;
+  color: #fb4137;
+}
+
+.head-title {
+  z-index: 20;
+  margin-left: 40px;
+}
+.head-title {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.head-title:hover {
+  transform: scale(1.1);
+}
+
+.head-title {
+  user-select: none;
+  background-image: url("../../assets/Antagon.png");
+  background-position: center;
+  background-size: 160px;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
+}
+
+.head-title > h1,
+.head-title > p {
+  color: #00000000;
+}
+
+nav {
+  margin-right: 40px;
+  width: 100%;
+  max-width: 550px;
+}
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+nav > ul > li {
+  position: relative;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 10px;
+  position: relative;
+  border-radius: 20px;
+}
+nav > ul > li > a:hover::after,
+nav > ul > .active > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fb4137;
+}
+.about-main {
+  max-width: 1750px;
+  margin: auto;
+  margin-top: 200px;
+  overflow-x: hidden;
+}
+
+.about-main > .about-section > .about-article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.about-h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 60px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 460px;
+  width: 360px;
+  border-radius: 20px;
+  margin: 20px;
+  text-align: start;
+  padding: 30px;
+  background-color: #1f2937;
+  transition: 0.2s ease-in-out;
+}
+.card:hover {
+  scale: 1;
+  transform: scale(1.01);
+  box-shadow: 0 0 11px #ffffff;
+}
+.card > h3 {
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 2rem;
+}
+.card > p {
+  font-size: 1.2rem;
+}
+
+.about-button2 {
+  display: inline-block;
+  padding: 10px 0rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: #8a3fdf00;
+  border: #fb4137 3px solid;
+  text-decoration: none;
+  width: 100%;
+  max-width: 330px;
+  color: white;
+  box-shadow: 0 0 20px transparent;
+  text-align: center;
+}
+
+.about-button {
+  display: inline-block;
+  padding: 10px 0%;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: #fb4137;
+  border: #fb4137 3px solid;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  max-width: 330px;
+  box-shadow: 0 0 20px transparent;
+}
+.about-button:hover,
+.about-button2:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 16px #fb4137;
+}
+
+.about-buttons {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+  .about-main > .about-section > .about-article {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 450px;
+  }
+  .card-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .about-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-button,
+  .about-button2 {
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav > ul > li > a:hover::after,
+  nav > ul > .active > a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #00000000;
+  }
+
+  .head-title {
+    width: 100px;
+    background-size: 100%;
+  }
+
+  form {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0px;
+    margin-left: 0;
+    order: 2;
+  }
+
+  .about-article {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+  }
+
+  nav > ul > li.active::after {
+    display: none;
+  }
+
+  nav > ul > li.active > a {
+    background-color: #0e0e0e;
+  }
+  header {
+    z-index: 5;
+    border-bottom: solid 2px #fb4137;
+  }
+
+  nav {
+    position: absolute;
+    top: -200%;
+    right: 0%;
+    width: 100%;
+    max-width: 100%;
+    transition: all 0.3s;
+    opacity: 0;
+    background-color: #050505;
+    z-index: 1;
+  }
+  header {
+    background-color: #050505;
+  }
+  nav > ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  nav > ul > li {
+    width: 100%;
+    height: 100px;
+    display: block;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  nav > ul > li > a {
+    display: flex;
+    border-radius: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+  }
+  .head-div {
+    height: 120px;
+  }
+
+  nav > ul > li > a:hover {
+    background-color: #0e0e0e;
+  }
+
+  #menuIcon {
+    display: block;
+    margin-right: 40px;
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+
+  #menuIcon > i {
+    color: #fb4137;
+  }
+
+  nav.open {
+    opacity: 1;
+    right: 0;
+    top: 120px;
+    margin-right: 0;
+    border-bottom: solid 2px #fb4137;
+  }
+
+  .about-main > .about-section > .about-article {
+    flex-direction: column;
+  }
+
+  .about-main {
+    margin-top: 180px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about-h2 {
+    font-size: 2rem;
+  }
+  .card {
+    height: 410px;
+  }
+  .card > h3 {
+    font-size: 1.6rem;
+  }
+  .card > p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    height: auto;
+    width: 250px;
+    margin-right: 0px;
+    margin-left: 0px;
+    gap: 1.5rem;
+  }
+}

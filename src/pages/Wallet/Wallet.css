@@ -1,0 +1,296 @@
+* {
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+body {
+  background-color: #0e0e0e;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0e0e0e;
+}
+
+.head-title > a {
+  opacity: 0;
+}
+
+.head-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1750px;
+  margin: auto;
+  height: 160px;
+}
+
+#menuIcon {
+  z-index: 20;
+  display: none;
+  color: #fb4137;
+}
+
+.head-title {
+  z-index: 20;
+  margin-left: 40px;
+}
+.head-title {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.head-title:hover {
+  transform: scale(1.1);
+}
+
+.head-title {
+  user-select: none;
+  background-image: url("../../assets/Antagon.png");
+  background-position: center;
+  background-size: 160px;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
+}
+
+.head-title > h1,
+.head-title > p {
+  color: #00000000;
+}
+
+nav {
+  margin-right: 40px;
+  width: 100%;
+  max-width: 550px;
+}
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+nav > ul > li {
+  position: relative;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 10px;
+  position: relative;
+  border-radius: 20px;
+}
+nav > ul > li > a:hover::after,
+nav > ul > .active > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fb4137;
+}
+
+/* WALLET CSS */
+
+.product-container {
+  background-color: #131313;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.wallet-balance {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wallet-balance-title {
+  font-weight: bold; 
+  font-size: 20px; 
+}
+
+.wallet-balance-value {
+  font-weight: bold;
+  font-size: 30px; 
+}
+
+
+.wallet-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wallet-button {
+  display: block;
+  text-align: center;
+  padding: 7px 30px;
+  border-radius: 8px;
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: red;
+  text-decoration: none;
+  color: white;
+}
+
+.wallet-button:hover {
+  transform: scale(1.04);
+}
+
+
+
+.list-container {
+  width: 90%;
+  margin: 50px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #ffffff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.list-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* Distribuye columnas uniformemente */
+  background-color: #131313;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px 15px;
+}
+
+.list-body {
+  max-height: 400px; /* Define una altura máxima visible */
+  overflow-y: auto;  /* Activa el scroll vertical */
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* Distribuye columnas uniformemente */
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #131313;
+}
+
+.list-item:hover {
+  background-color: #333333; /* Fondo al hacer hover */
+}
+
+.list-item p {
+  margin: 0;
+  padding: 5px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.action-button {
+  background-color: #0e0e0e;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.action-button:hover {
+  transform: scale(1.05);
+  background-color: #131313;
+}
+
+.list-body::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra */
+}
+
+.list-body::-webkit-scrollbar-thumb {
+  background: #444444; /* Color de la parte que se mueve */
+  border-radius: 4px; 
+}
+
+.list-body::-webkit-scrollbar-thumb:hover {
+  background: #555555; 
+}
+
+.list-body::-webkit-scrollbar-track {
+  background: #1e1e1e; /* Fondo de la pista del scroll */
+  border-radius: 4px;
+}
+
+/* === Responsive === */
+
+/* Pantallas medianas */
+@media (max-width: 768px) {
+  .action-buttons {
+    gap: 10px;
+  }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 480px) {
+  .list-header {
+    display: none; 
+  }
+
+  .list-item {
+    grid-template-columns: 1fr 1fr; 
+    padding: 10px;
+  }
+
+  .list-item p {
+    white-space: normal; /* Permitir saltos de línea */
+    overflow: visible;
+  }
+
+  .list-item:hover {
+    background-color: #333333;
+  }
+
+  .wallet-balance-title {
+    font-size: 15px; 
+  }
+  
+  .wallet-balance-value {
+    font-size: 15px; 
+  }
+
+  .wallet-buttons {
+    gap: 10px;
+  }
+
+  .wallet-button {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 10px;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    background-color: red;
+    text-decoration: none;
+    color: white;
+  }
+}
